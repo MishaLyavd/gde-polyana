@@ -1,0 +1,200 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111010;
+  color: #fff;
+  font-family: "Roboto-Regular";
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-width: 725px;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  padding: 20px 0;
+}
+
+.containerColumn,
+.containerRow {
+  display: flex;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+}
+
+.containerColumn {
+  flex-direction: column;
+}
+
+.leftSide {
+  max-width: 195px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 30px 0 0;
+  flex-shrink: 0;
+}
+
+.rightSide {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #C4C4C4;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #A0A0A0;
+}
+
+._link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button_orange {
+  background: linear-gradient(to bottom, #F6791E, #F95613);
+  border: none;
+}
+
+.button_orange,
+.button_black {
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 0.3s;
+  min-width: 135px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button_black {
+  background-color: #111010;
+  border: 2px solid #F76226;
+}
+
+.button_black:hover {
+  background-color: #F6791E;
+}
+
+.button_orange:hover {
+  filter: drop-shadow(0 0 5px #FF8453);
+}
+
+._hidden {
+  display: none;
+}
+
+._invisible {
+  visibility: hidden;
+}
+
+*:focus {
+  outline: 5px auto #F6781D;
+}
+
+.filterButton {
+  display: none;
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("../fonts/Roboto-Light.eot") format("eot"),
+    url("../fonts/Roboto-Light.svg") format("svg"),
+		url("../fonts/Roboto-Light.ttf") format("ttf"),
+		url("../fonts/Roboto-Light.woff") format("woff"),
+		url("../fonts/Roboto-Light.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("../fonts/Roboto-Regular.eot") format("eot"),
+    url("../fonts/Roboto-Regular.svg") format("svg"),
+		url("../fonts/Roboto-Regular.ttf") format("ttf"),
+		url("../fonts/Roboto-Regular.woff") format("woff"),
+		url("../fonts/Roboto-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 135px 0 20px;
+  }
+
+  .wrapper {
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .leftSide {
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    padding: 80px 50px 15px;
+    z-index: 2;
+    background-color: #111010;
+    flex-shrink: 0;
+  }
+
+  .leftSide_active {
+    display: flex;
+  }
+
+  .rightSide {
+    padding-top: 90px;
+  }
+
+  .button_orange,
+  .button_black {
+    padding: 15px 30px;
+    font-size: 30px;
+  }
+
+  .filterSubmit {
+    align-self: stretch;
+  }
+
+  .filterButton {
+    position: absolute;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    display: block;
+    z-index: 3;
+  }
+}

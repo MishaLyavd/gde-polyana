@@ -1,0 +1,183 @@
+.block {
+    background-color: #111010;
+    height: 70px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.menuBlock {
+    display: flex;
+    user-select: none;
+}
+
+.logoImg {
+    margin-right: 10px;
+}
+
+.logoText {
+    font-size: 48px;
+    font-weight: normal;
+    font-family: "TamburinModern";
+    line-height: 35px;
+}
+
+.pointText {
+    text-decoration: underline;
+    color: #F76226;
+    font-family: "Roboto-Light";
+}
+
+.menuItem {
+    display: flex;
+    transition: 0.2s;
+}
+
+.menuMobileButton {
+    display: none;
+    background: url("./images/menu.png") center no-repeat;
+    width: 115px;
+    height: 115px;
+    background-size: 75%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
+    margin-left: -10px;
+    filter: brightness(10);
+}
+
+.menuMobileButton:focus {
+    outline: none;
+    border: none;
+}
+
+.menuMobileButton:hover {
+    filter: none;
+}
+
+.menuMobileButton_active {
+    background: url("./images/close.png") center no-repeat;
+}
+
+.mobileMenu {
+    display: none;
+    position: fixed;
+    top: 115px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111010;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-bottom: 115px;
+    z-index: 4;
+}
+
+.menuLinkMobile {
+    padding: 40px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.menuLinkMobile:hover {
+    background-color: #F6791E;
+}
+
+.menuLink {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 15px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menuAuth {
+    transition-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menuAuth::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition-duration: 0.4s;
+}
+
+.menuAuth:hover.menuAuth::after {
+    width: 100%;
+    background-color: #F76226;
+}
+
+.menuAuth:hover {
+    color: #F76226;
+}
+
+.lk {
+    padding-left: 48px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.lk::before {
+    content: url("./images/avatar.png");
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #111010;
+    border-radius: 50%;
+}
+
+@font-face {
+	font-family: "TamburinModern";
+	src: url("../../fonts/TamburinModern.eot") format("eot"),
+        url("../../fonts/TamburinModern.svg") format("svg"),
+		url("../../fonts/TamburinModern.ttf") format("ttf"),
+		url("../../fonts/TamburinModern.woff") format("woff"),
+		url("../../fonts/TamburinModern.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+    .block {
+        height: 115px;
+        position: fixed;
+        filter: drop-shadow(0 5px 10px #111010);
+        z-index: 5;
+    }
+
+    .logoImg {
+        margin-right: 10px;
+        height: 70px;
+        padding-bottom: 10px;
+    }
+
+    .logoText {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .gdePolyana,
+    .menuDesktop {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex;
+    }
+
+    .menuMobileButton {
+        display: block;
+    }
+}

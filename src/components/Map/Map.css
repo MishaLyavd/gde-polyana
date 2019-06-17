@@ -1,0 +1,33 @@
+.block {
+    height: 500px;
+    overflow: hidden;
+    border: 2px solid #F76226;
+    box-sizing: border-box;
+    width: 99%;
+}
+
+.baloon {
+    display: flex;
+}
+
+.icon {
+    width: 125px;
+    height: 125px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.text {
+    padding: 3px 10px;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+}

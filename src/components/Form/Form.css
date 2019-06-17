@@ -1,0 +1,345 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px 20px 30px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    min-height: 24px;
+    width: 465px;
+}
+
+.name {
+    line-height: 24px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 5px 15px;
+}
+
+.leftSide {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 8px 20px 8px 5px;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    position: relative;
+    flex-grow: 1;
+    min-height: 28px;
+}
+
+._wrap {
+    flex-wrap: wrap;
+}
+
+.input {
+    transition-duration: 0.3s;
+    transition-property: filter;
+    border-radius: 3px;
+    min-width: 240px;
+    box-sizing: border-box;
+    padding: 0 4px;
+}
+
+.input:read-only {
+    background-color: #D3D3D3;
+}
+
+.worktime {
+    width: 115px;
+    min-width: 0px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.input:disabled {
+    background-color: #D5D5D5;
+    color: #808080;
+}
+
+.textarea {
+    resize: none;
+    flex-grow: 1;
+    min-width: 290px;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    left: -1000px;
+}
+
+.checkbox:checked + .button__label {
+    background: linear-gradient(to bottom, #F6791E, #F95613);
+}
+
+.checkbox:disabled + .button__label {
+    color: #D5D5D5;
+    border-color: #808080;
+}
+
+.button:hover {
+    border: 1px solid #FB4800;
+    filter: drop-shadow(0 0 3px #FF8453);
+}
+
+.button {
+    border-radius: 3px;
+    border: 1px solid #F76226;
+    text-align: center;
+    margin-right: 10px;
+    background: #000;
+    margin-bottom: 10px;
+    transition-duration: 0.2s;
+    transition-property: filter;
+    user-select: none;
+}
+
+.submit {
+    margin-top: 15px;
+}
+
+.button__label {
+    display: block;
+    min-width: 43px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.error {
+    outline: 2px solid red;
+    outline-offset: -1px;
+}
+
+.info {
+    margin-left: auto;
+    align-self: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.errorField {
+    height: 28px;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 2px #FF8453);
+    border: 1px solid #F76226;
+    color: #F76226;
+    margin-left: 10px;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.errorField::before {
+    position: absolute;
+    content: '';
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    left: -5px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-left: 1px solid #F76226;
+    border-bottom: 1px solid #F76226;
+}
+
+.checkboxOne {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.checkboxOne__label {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.checkboxOne__label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #F76226;
+    background-color: #111010;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 2px;
+    border-radius: 1px;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+}
+  
+.checkboxOne__label::after {
+    content: "";
+    background: url("../Checkbox/images/check.png") center no-repeat;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+  
+.checkbox:hover + .checkboxOne__label::before {
+    border-color: #FB4800;
+}
+  
+.checkbox:active + .checkboxOne__label::before {
+    border-color: #F76226;
+}
+  
+.checkbox:focus + .checkboxOne__label::before {
+    border: 2px solid #F78050;
+    border-radius: 2px;
+    left: -1px;
+    top: 1px;
+}
+  
+.checkbox:checked + .checkboxOne__label::after {
+    opacity: 1;
+}
+
+.required::after {
+    content: '*';
+    color: red;
+    padding-left: 3px;
+}
+
+.date {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    .block {
+        font-size: 30px;
+        align-items: stretch;
+        padding: 12px 0 30px;
+    }
+
+    .title {
+        font-size: 40px;
+        padding: 8px 5px 35px;
+    }
+
+    .leftSide {
+        padding: 20px 20px 20px 5px;
+        width: 295px;
+    }
+
+    .rightSide {
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 1;
+        overflow-x: hidden;
+    }
+
+    .flexRow {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .row {
+        width: auto;
+        min-height: 100px;
+    }
+
+    .worktime {
+        width: 177px;
+    }
+
+    .errorField {
+        background: none;
+        border: none;
+        padding: 10px;
+        font-size: 24px;
+    }
+
+    .errorField::before {
+        display: none;
+    }
+
+    .error {
+        outline: 4px solid red;
+    }
+
+    .submit {
+        min-width: 300px;
+        margin-top: 30px;
+    }
+
+    .button__label {
+        min-width: 80px;
+        padding: 5px 15px;
+    }
+
+    .button:hover {
+        border: 2px solid #FB4800;
+    }
+    
+    .button {
+        border-radius: 10px;
+        border: 2px solid #F76226;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input {
+        align-self: stretch;
+    }
+
+    .info {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .checkboxOne__label::before {
+        border: 2px solid #F76226;
+        width: 40px;
+        height: 40px;
+        top: 5px;
+        box-sizing: border-box;
+    }
+      
+    .checkboxOne__label::after {
+        top: 10px;
+        background-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+      
+    .checkbox:focus + .checkboxOne__label::before {
+        border: 2px solid #F78050;
+        left: 0;
+        top: 5px;
+    }
+
+    .name {
+        line-height: 35px;
+    }
+
+    .date {
+        width: 100%;
+    }
+}

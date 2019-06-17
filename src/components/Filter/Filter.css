@@ -1,0 +1,43 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    transition-duration: 0.3s;
+}
+
+.title {
+    font-weight: bold;
+    padding-left: 26px;
+    margin-bottom: 5px;
+}
+
+._active {
+    filter: drop-shadow(0 0 12px #FF8453);
+}
+
+@media screen and (max-width: 767px) {
+    .block {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+    }
+
+    .title {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+        font-size: 40px;
+        transition-duration: 0.3s;
+    }
+
+    ._active {
+        filter: none;
+    }
+
+    ._active .title {
+        color: #FF8453;
+    }
+}

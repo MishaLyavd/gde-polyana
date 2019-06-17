@@ -1,0 +1,485 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.user {
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.user,
+.adminMenu {
+    display: flex;
+    border: 4px double #F76226;
+    background-color: #111010;
+    box-shadow: inset 0 0 10px #FF8453;
+}
+
+.adminMenu {
+    border-radius: 0 0 25px 25px;
+    flex-direction: column;
+    border-top: none;
+    margin-left: 30px;
+}
+
+.adminMenu__row {
+    display: flex;
+}
+
+.adminMenu__column {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.adminMenu__bottom {
+    padding: 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adminMenu__button {
+    margin: 10px 0;
+}
+
+.adminMenu__title {
+    font-size: 18px;
+}
+
+.crown {
+    position: absolute;
+    top: -27px;
+    right: -27px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: #111010;
+    border: 2px solid #F76226;
+    border-radius: 0 0 0 50%;
+    box-shadow: 0 0 10px #FF8453;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: url("./images/crown.png") bottom 15px left 12px no-repeat ;
+}
+
+.crown_active {
+    background-color: #F6791E;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.userAvatar {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    user-select: none;
+    border-radius: 10px;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.userTitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.userText {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.password {
+    margin-top: auto;
+}
+
+.title {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.noItems {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.placeIcon {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    user-select: none;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.placeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.placeName {
+    margin-bottom: 10px;
+}
+
+.placeText {
+    padding: 3px 10px;
+}
+
+.placeToken {
+    display: flex;
+    align-items: center;
+}
+
+.itemsConteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    min-width: 680px;
+}
+
+.book,
+.place {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #AB3405;
+    position: relative;
+}
+
+.book {
+    align-items: center;
+}
+
+.bookItem,
+.requestItem {
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.bookItem {
+    text-align: center;
+}
+
+.bookIcon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.bookName {
+    width: 18%;
+}
+
+.bookName,
+.requestName {
+    font-weight: bold;
+    text-align: left;
+}
+
+.bookDate {
+    width: 22%;
+}
+
+.bookTime {
+    width: 17%;
+}
+
+.bookPersons {
+    width: 16%;
+}
+
+.bookStatus {
+    display: flex;
+    align-items: center;
+    width: 27%;
+}
+
+.requestName,
+.requestPhone {
+    flex-grow: 1;
+}
+
+.requestEmail {
+    flex-grow: 1.4;
+}
+
+.place {
+    align-items: flex-start;
+}
+
+._link {
+    color: #F76226;
+    padding: 0 10px;
+}
+
+.addPlace {
+    margin: 0 10px;
+    align-self: flex-start;
+}
+
+.edit {
+    background: url("./images/edit.png") center no-repeat;
+    right: 41px;
+    background-size: 25px;
+}
+
+.edit,
+.frame,
+.delete {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    cursor: pointer;
+    padding: 8px;
+    transition-duration: 0.3s;
+    border: none;
+    outline: none;
+    box-sizing: content-box;
+}
+
+.frame {
+    background: url("./images/frame.png") center no-repeat;
+    right: 82px;
+    background-size: 25px;
+}
+
+.delete {
+    background: url("./images/cancel.png") center no-repeat;
+    right: 0;
+    background-size: 18px;
+}
+
+.cancel {
+    background: url("./images/cancel.png") center no-repeat;
+}
+
+.accept {
+    background: url("./images/accept.png") center no-repeat;
+}
+
+.copy {
+    background: url("./images/copy.png") center no-repeat;
+}
+
+.cancel,
+.accept,
+.copy {
+    width: 24px;
+    height: 24px;
+    background-size: 18px;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
+    box-sizing: content-box;
+}
+
+.edit:hover,
+.frame:hover,
+.delete:hover,
+.cancel:hover,
+.accept:hover,
+.copy:hover,
+.edit:focus,
+.frame:focus,
+.delete:focus,
+.cancel:focus,
+.accept:focus,
+.copy:focus {
+    filter: drop-shadow(0 0 5px #FF8453);
+}
+
+.request {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.requestM,
+.requestM_disabled {
+    margin-bottom: 20px;
+    display: none;
+    align-self: flex-start;
+}
+
+.request_disabled {
+    padding: 10px 20px;
+}
+
+.requestM_disabled {
+    padding: 15px 30px;
+    font-size: 30px;
+}
+
+.request_disabled,
+.requestM_disabled {
+    color: #9D9D9D;
+    border-radius: 50px;
+    user-select: none;
+    min-width: 135px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #111010;
+    border: 2px solid #F76226;
+}
+
+._link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    .user {
+        align-self: stretch;
+    }
+
+    .userTitle,
+    .title {
+        font-size: 35px;
+    }
+
+    .userText {
+        font-size: 30px;
+    }
+
+    .placeIcon {
+        width: 200px;
+        height: 200px;
+        margin-right: 15px;
+    }
+
+    .placeText {
+        padding: 5px 10px;
+        font-size: 27px;
+    }
+
+    .edit,
+    .frame,
+    .delete {
+        width: 50px;
+        height: 50px;
+        top: 0;
+    }
+
+    .cancel,
+    .accept,
+    .copy {
+        width: 50px;
+        height: 50px;
+        background-size: 36px;
+    }
+
+    .frame {
+        right: 132px;
+        background-size: 50px;
+    }
+    
+    .delete {
+        right: 0;
+        background-size: 36px;
+    }
+
+    .edit {
+        right: 66px;
+        background-size: 50px;
+    }
+
+    .book {
+        position: relative;
+        padding: 10px 70px 10px 10px;
+        flex-wrap: wrap;
+        font-size: 27px;
+    }
+
+    .bookIcon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .bookName,
+    .bookDate,
+    .bookTime,
+    .bookPersons,
+    .bookStatus {
+        width: auto;
+    }
+    
+    .bookName,
+    .requestName {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .bookItem,
+    .requestItem {
+        padding: 15px 15px 15px 0;
+        box-sizing: content-box;
+    }
+
+    .cancel,
+    .accept {
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+
+    .noItems {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .request,
+    .request_disabled {
+        display: none;
+    }
+
+    .requestM,
+    .requestM_disabled {
+        display: flex;
+    }
+
+    .user,
+    .adminMenu {
+        border: 2px solid #F76226;
+    }
+
+    .adminMenu__column {
+        padding: 30px;
+    }
+
+    .adminMenu__title {
+        font-size: 30px;
+    }
+}
